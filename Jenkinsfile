@@ -9,8 +9,19 @@ date'''
     }
 
     stage('build') {
-      steps {
-        echo 'this is bulid step'
+      parallel {
+        stage('build') {
+          steps {
+            echo 'this is bulid step'
+          }
+        }
+
+        stage('send msg to dev') {
+          steps {
+            sh 'ls -h'
+          }
+        }
+
       }
     }
 
