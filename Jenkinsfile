@@ -8,5 +8,11 @@ date'''
       }
     }
 
+    stage('build') {
+      steps {
+        echo 'this is bulid step'
+      }
+    }
+
   }
 }
