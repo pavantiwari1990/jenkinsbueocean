@@ -25,5 +25,12 @@ date'''
       }
     }
 
+    stage('prod deploy') {
+      steps {
+        sh '''sleep 30
+'''
+      }
+    }
+
   }
 }
